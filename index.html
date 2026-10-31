@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Yönlendiriliyor - ENGRARE</title>
+    
+    <!-- Arama motorlarına (SEO) ana sitenin engrare.com olduğunu bildirir -->
+    <link rel="canonical" href="https://engrare.com/">
+    
+    <!-- JavaScript kapalıysa 0 saniyede anında yönlendirir -->
+    <meta http-equiv="refresh" content="0; url=https://engrare.com/">
+
+    <script>
+        // Kullanıcının girdiği alt yolu ve parametreleri (örn: /sepet?id=1) koruyarak yönlendirir.
+        // replace() kullanıldığı için kullanıcı "Geri" tuşuna bastığında tekrar eski siteye düşmez.
+        const currentPath = window.location.pathname + window.location.search + window.location.hash;
+        window.location.replace("https://engrare.com" + currentPath);
+    </script>
+</head>
+<body style="background-color: #0b0d17; color: #ffffff; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+    <p>ENGRARE ana sayfasına yönlendiriliyorsunuz... Otomatik yönlendirme çalışmazsa <a href="https://engrare.com" style="color: #4da3ff;">buraya tıklayın</a>.</p>
+</body>
+</html>
